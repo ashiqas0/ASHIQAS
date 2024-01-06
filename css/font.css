@@ -1,0 +1,23 @@
+/* ====== Google Fonts ====== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+:root{
+    --header-height : 56px;
+
+    /* ====== Font and Typography ======= */
+    --roboto-font:'Roboto Mono', sans-serif;
+    --mono-font:'Roboto Mono', monospace;
+
+    --fs-h1: 44px;
+    --fs-h2: 36px;
+    --fs-lg: 18px;
+    --fs-base: 16px;
+    --fs-sm: 14px;
+    --fs-xi: 12px;
+
+    /* ====== Font and Typography ======= */
+    --medium:500;
+    --semibold:600;
+    --bold:700;
+    
+}

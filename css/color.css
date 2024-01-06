@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #4a4a4a;
+    --text-color: #999;
+    --bg-color: #e9ecef;
+    --border-color: #e5f369;
+    --paragraph-color: rgb(2, 2, 63);
+
+    --linear-gradient: linear-gradient(rgba(68, 67, 67, 0.95) 34%,
+            rgba(55, 55, 55, 0.95));
+
+
+    --roboto-font: 'Roboto', sans-serif;
+    --mono-font: 'Roboto Mono', monospace;
+}
+
+
+.nav-link:hover {
+    color: var(--text-color);
+}
+
+.navbar-toggler {
+    background: var(--bg-color);
+}
+
+.home-name,
+.home-work,
+.home-list,
+.social-links,
+.contact-social-link,
+p {
+    color: #fff;
+}
+
+.services-detail,
+.hello-details {
+    color: var(--paragraph-color);
+}
+
+.author-name {
+    color: #a39191;
+}
+
+.author-project {
+    color: #8b6969;
+}

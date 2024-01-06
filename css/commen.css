@@ -1,0 +1,193 @@
+/* ====== Base ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-pink-purple-blue-watercolor-watercolor-background-stylewatercolor-backgroundblue-pinksimplefresh-image_72286.jpg);
+    background-size: cover;
+    font-family: var(--roboto-font);
+    scroll-behavior: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+p{
+    text-align: justify;
+}
+
+/* ======================== Re Useable css ==================== */
+.container {
+    max-width: 1140px;
+    padding-left: 30px;
+    padding-right: 15px;
+    position: relative;
+}
+
+.show-menu {
+    transform: translateX(0);
+}
+
+.section-box{
+    border: 2px solid var(--border-color);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .2);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, .1);
+}
+
+.section-title-1,
+.section-title {
+    font-size: 32px;
+    line-height: 18px;
+    font-weight: var(--medium);
+    margin: 30px 0;
+}
+
+/* ========================== Bracker ================= */
+.breaker{
+    display: none;
+    height: 4px;
+    background-color: tomato;
+    width: 90%;
+    border-radius: 5px;
+}
+
+/* ========================== Scroll Header ================= */
+.scroll-header {
+    position: fixed;
+    background-color: var(--primary-color);
+    box-shadow: 0 5px 8px 0 rgb(0 0 0 /14%);
+}
+
+/* ============ Background - testimonial and contact  ========== */
+.contact,
+.testimonial {
+    background: url(../assets/images/testimonial.jpg);
+    background-size: cover;
+    background-position: 60%;
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: var(--linear-gradient);
+    height: 100%;
+    width: 100%;
+}
+
+.testimonial::before {
+    content: "";
+    background: var(--linear-gradient);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+/* ============= Background - Resume and Gallery  ============= */
+.background-second {
+    height: 250px;
+    background: url(../assets/images/testimonial.jpg);
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+}
+.background-second::before {
+    content: "";
+    background: var(--linear-gradient);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.back-to-home {
+    display: inline-flex;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+/* ========================== Break Point ================= */
+@media (max-width : 602px) {
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        background: var(--linear-gradient);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    .show-menu {
+        transform: translateX(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        row-gap: 16PX;
+        text-align: center;
+    }
+
+    .nav-close,
+    .nav-toggler {
+        display: block;
+    }
+
+    .nav-close {
+        font-size: 30px;
+        position: absolute;
+        top: 28px;
+        left: 8%;
+        cursor: pointer;
+    }
+
+    .nav-toggler {
+        color: #fff;
+        font-size: 24px;
+        opacity: 0.5;
+        margin-left: 12px;
+    }
+
+    .section-box {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .breaker{
+        display: block;
+    }
+
+}
+
+@media(max-width :750px) {
+    .service-item {
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        margin: 80px 12px;
+    }
+
+    .service-icon {
+        margin: -100px 0 30px 0;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+}

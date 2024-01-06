@@ -1,0 +1,353 @@
+/* ================= Header =============== */
+.header {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+}
+
+.nav-menu {
+    position: relative;
+}
+
+.nav-list {
+    column-gap: 3.25rem;
+}
+
+.nav-link {
+    color: #fff;
+    position: relative;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 11px;
+    right: 8px;
+    width: 7px;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.active-link {
+    opacity: 0.5;
+}
+
+.active-link::after {
+    opacity: 1;
+}
+
+.nav-close,
+.nav-toggler {
+    display: none;
+}
+
+/* ============================ Home ===================== */
+.home {
+    background: url(/assets/images/banner-img.jpg);
+    background-size: cover;
+    margin-bottom: 60px;
+    background-position: 100%;
+    position: relative;
+}
+
+.home::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--linear-gradient);
+
+}
+
+.profile {
+    width: 300px;
+    height: 380px;
+    z-index: 5;
+    object-fit: cover;
+    border-radius: 15px;
+    transform: translateY(40px);
+    box-shadow: 0 0 27px rgba(2, 2, 2, 0.34);
+    transition: 0.3s;
+}
+
+.home-data {
+    z-index: 5;
+}
+
+.home-name {
+    font-size: var(--fs-h1);
+    line-height: 1.14em;
+    margin: 0.9em 0 0.23em;
+}
+
+.home-list dt {
+    float: left;
+    font-weight: var(--bold);
+    opacity: 0.4;
+}
+
+.home-list dd {
+    padding-left: 80px;
+}
+
+.social-links {
+    font-size: 28px;
+    line-height: 21px;
+    margin-right: 4px;
+    opacity: 0.4;
+    transition: 0.3s;
+}
+
+.social-links:hover {
+    opacity: 1;
+}
+
+/* =========================== Hello ======================= */
+.btn i {
+    font-weight: 900;
+}
+
+/* ========================== Services ===================== */
+.service-item-box {
+    position: relative;
+}
+
+.service-item {
+    border: 1px solid rgb(92, 1, 1);
+    display: flex;
+    align-items: center;
+    padding: 50px 30px 50px 20px;
+    background: #fff;
+    border-radius: 24px;
+    margin: 12px 12px 12px 200px;
+}
+
+.service-icon {
+    width: 28vw;
+    height: 180px;
+    object-fit: cover;
+    margin-left: -80px;
+    margin-right: 30px;
+    border-radius: inherit;
+}
+
+/* ========================== Testimonials =================== */
+.testimonial-item {
+    color: #fff;
+    padding: 5% 8% 5% 7%;
+}
+
+/* =========================== Gallery ====================== */
+.gallery-item {
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    justify-content: center;
+    min-width: 288px;
+    max-width: 350px;
+    height: 220px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    float: left;
+}
+
+.card img {
+    transition: 0.7s all;
+    border-radius: 12px;
+    height: 200px;
+}
+
+.card-body {
+    display: grid;
+    place-content: center;
+    visibility: hidden;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.3s ease-in-out;
+    background: rgba(0, 0, 0, .2);
+    color: #fff;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.2s;
+}
+
+.card:hover img {
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+/* =========================== Contact ===================== */
+.section-title-1 {
+    color: darkgrey;
+    display: inline;
+}
+
+.contact-item {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-socials li {
+    padding: 4px 0;
+}
+
+.contact-input-div {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.contact-input-div input,
+.contact-input-div textarea {
+    padding: 6px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    border-radius: 5px;
+    width: 80%;
+    transition: 0.5s;
+}
+
+.contact-input-div span {
+    position: absolute;
+    padding-top: 9px;
+    left: 12%;
+    pointer-events: none;
+    font-size: 14px;
+
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.contact-input-div input:focus~span,
+.contact-input-div input:valid~span,
+.contact-input-div textarea:valid~span:hover,
+.contact-input-div textarea:focus~span {
+    color: rgb(38, 212, 212);
+    transform: translateX(10px) translateY(-12px);
+    font-size: 14px;
+    padding: 0 10px;
+    background: var(--linear-gradient);
+    border-left: 2px solid rgb(38, 212, 212);
+    border-right: 2px solid rgb(38, 212, 212);
+    letter-spacing: 0.2em;
+}
+
+.contact-input-div input:focus,
+.contact-input-div input:valid,
+.contact-input-div textarea:focus {
+    border: 2px solid rgb(38, 212, 212);
+}
+
+.contact-btn {
+    width: 80%;
+    box-shadow: 0 1px 29px rgb(0 0 0 / 40%);
+}
+
+/* ============================ Footer ======================= */
+.footer-copy p {
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+/* ============================= Section-2 =============================== */
+/* ====================== Resume / Skills ================================= */
+.resume {
+    margin-top: -170px;
+}
+
+.resume-box {
+    column-gap: 10px;
+    row-gap: 10px;
+    justify-content: center;
+    background: rgba(14, 14, 14, 0.5);
+    border-radius: 10px;
+}
+
+.education-data,
+.experience-data {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.resume-item {
+    position: relative;
+    border-left: 2px solid;
+    padding-left: 10px;
+}
+
+.resume-item::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    left: -7px;
+    background-color: var(--bg-color);
+    
+}
+
+.resume-date {
+    line-height: 1px;
+}
+
+.skill-box {
+    justify-content: center;
+    column-gap: 18px;
+    row-gap: 12px;
+    background: rgba(14, 14, 14, 0.5);
+    border-radius: 10px;
+}
+
+.skills-bar,
+.skills-percentage {
+    height: 5px;
+    border-radius: 4px;
+}
+
+.skills-bar {
+    background-color: var(--bg-color-alt);
+}
+
+.skills-percentage {
+    display: block;
+    background-color: var(--primary-color);
+}
+
+/* ========================== Gallery-detail-box ================== */
+
+.g-detail-box {
+    background: rgba(14, 14, 14, 0.5);
+    border-radius: 10px;
+}
+.g-date{
+    color: #abaaaa;
+}
+.figure-img img{
+    width: 100%;
+}
